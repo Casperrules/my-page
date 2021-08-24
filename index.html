@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <canvas class="container" id="container" role="main"></canvas>
+    <header id="header" class="">
+      <img src="../statics/cloud1.png" alt="" class="cloud1" />
+      <img src="../statics/cloud2.png" alt="" class="cloud2" />
+      <img src="../statics/cloud3.png" alt="" class="cloud3" />
+      <nav class="navbar">
+        <div ><a href="#" class="title"> HI! </a></div>
+        <div class="my-links">
+          <ul>
+            <li><a href="#about-me">About </a></li>
+            <!-- <li><a href="http://">Projects</a></li> -->
+            <li><a href="#fun">Fun </a></li>
+            <li><a href="http://">Contact </a></li>
+          </ul>
+          <div id="toggle">
+            <div id="circle"></div>
+          </div>
+        </div>
+      </nav>
+      <div class="my-intro">
+        <h1 class="title">
+          Adarsh Dubey
+        </h1>
+        <h4 class="desc">
+          Hello Peeps, I am an application developer,<br />
+          I aspire to put some text here. <br />
+          Welcome To My Page
+        </h4>
+      </div>
+      <div class="blur blurTop">
+        <canvas class="canvas" id="blurCanvasTop"></canvas>
+      </div>
+      <div class="blur blurBottom">
+        <canvas
+          width="1000px"
+          height="1000px"
+          class="canvas"
+          id="blurCanvasBottom"
+        ></canvas>
+      </div>
+    </header>
+    <section id="about-me">
+      <div class="left-side-panel">
+        <img src="https://media-exp1.licdn.com/dms/image/C4E03AQEXz6X-GDugmA/profile-displayphoto-shrink_800_800/0/1609275067458?e=1635379200&v=beta&t=frQicDZ87AxhDAMZ4-95K0m6lSSp4PJCb2iicH21xS4" alt="" srcset="" />
+        <div >
+          <h1 class="title">
+            This is ME !!!
+          </h1>
+        </div>
+      </div>
+      <div class="right-side-panel">
+        <h1 class="title">
+          About Me
+        </h1>
+        <p class="decription">
+          Hi! This is Adarsh, again. I am an application developer and I develop
+          apps for fun. I basically love to code, create python liberaries for
+          interesting DSA problems which also inclined me towards competetive
+          programming problems.
+        </p>
+        
+        <p class="description">
+          Following are the techs I have worked on:
+          <ul>
+            <li><strong>Python:-</strong> python has beenmy favourite language since I started learning programming 4 years ago. I have also been an instructor for advance python courses. The first web framework I learned was in python(flask and later Django). I also learned creating UIs in python and obviously data science, data visualization and machine learning</li>
+            <li><strong>Java:-</strong> Java was the second favourite language I had after python. I have worked with creating Java based applications and connecting them to sql databases to create a nice attractive desktop application. I also trained in Java and cleared the Java associate certificate from microsoft. </li>
+            <li><strong>JavaScript:-</strong> javaScript is probably the most used language by me, used for creating web applications, I later turned to typeScript but well "potato, better potato" right?</li>
+            <li><strong>TypeScript:-</strong> typeScript is a recent language for me but since I am quite familiar with javaScript, the shift to typeScript was really not that hard.</li>
+            <li><strong>Databases:-</strong> data in today's world is the most important asset and handling data becomes very cruicial for efficient performance of applications.m I have worked on both <strong>SQL</strong>(mySQL, Oracle SQL database)and <strong>NOSQL</strong>(mongoDB) type databases.</li>
+            <li><strong>REACT:-</strong> Well, talking about some useful liberaries, React is the most useful one I have used (with typeScript and javaScript). The process of frontend dev becomes so much easier with REACT</li>
+            <li><strong>Angular:-</strong> The angular framework, helps handelling frontend development easy too but the dataflow becomes sometimes confusing to me. I liked angular but I preffer React</li>
+            <li><strong>REST API:-</strong> I have been creating fullstack applications for about a year now. I love the way creating APIs make the backend so easy to handle and manageable. Most of the backends I create are using <strong>Express</strong> on Node.</li>
+          </ul>
+        </p>
+      </div>
+    </section>
+    <section id="fun">
+      <div class="coming-soon">
+        <h1>
+          COMING SOON!!!!!!!!!!!!!!!!!
+        </h1>
+      </div>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>
