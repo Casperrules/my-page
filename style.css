@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap");
 :root {
-  scroll-behaviour: smooth;
+  scroll-behavior: smooth;
   --primary-background-color: #9bc1ce;
   --toggle-background-color: #7dbbcf;
   --primary-text-color: rgb(71, 70, 70);
