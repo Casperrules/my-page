@@ -6,14 +6,15 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Hello World!</title>
   </head>
   <body>
     <canvas class="container" id="container" role="main"></canvas>
     <header id="header" class="">
-      <img src="./statics/cloud1.png" alt="" class="cloud1" />
-      <img src="./statics/cloud2.png" alt="" class="cloud2" />
-      <img src="./statics/cloud3.png" alt="" class="cloud3" />
+      <img src="../statics/cloud1.png" alt="" class="cloud1" />
+      <img src="../statics/cloud2.png" alt="" class="cloud2" />
+      <img src="../statics/cloud3.png" alt="" class="cloud3" />
       <nav class="navbar">
         <div><a href="#" class="title"> To the Clouds! </a></div>
         <div class="my-links">
@@ -264,16 +265,44 @@
       </div>
     </section>
     <section id="contact">
-      <div class="coming-soon">
-        <h1>
-          THIS ALSO COMING SOON :) !!!!!!!!!!!!!!!!!
-        </h1>
-      </div>
+      <form class="form">
+  <h2>Let's Connect:</h2>
+  <p type="Name:">
+    <input id="name" placeholder=""></input>
+  </p>
+  <p type="Subject:">
+    <input id="subject" placeholder=""></input>
+  </p>
+  <p type="Message:">
+    <input id="message" placeholder=""></input>
+  </p>
+  <button onclick="sendMail()">Send Message</button>
+  <div>
+    <a href="tel:+91-9424474682">
+      <span class="fa fa-phone"></span>+91-9424474682
+    </a>
+    <a href="mailto:adarsh.dubey64@gmail.com">
+      <span class="fa fa-envelope-o"></span>Mail
+    </a>
+    <a href="https://www.linkedin.com/in/adarsh-dubey-a78a1a137/"><span class="fa fa-linkedin" aria-hidden="true"></span>  LinkedIn </a>
+    <a href="https://github.com/Casperrules"><span class="fa fa-github" aria-hidden="true"></span> Github</a>
+    <a href="https://cenzio-rey.medium.com/"><span class="fa fa-medium" aria-hidden="true"></span>My Blogs</a>
+  </div>
+</form>
     </section>
     <script src="main.js"></script>
     <script src="crsl.js"></script>
     <script src="game1.js"></script>
     <script src="game2.js"></script>
     <script src="game3.js"></script>
+    <script>
+      function sendMail(){
+        const name = document.getElementById("name").value;
+      const subject = document.getElementById("subject").value;
+      const msg = document.getElementById("message").value;
+      const body = msg+'\n -'+name;
+      window.open('mailto:adarsh.dubedy64@gmail.com?subject='+subject+'&body='+body);
+      }
+    </script>
   </body>
 </html>
