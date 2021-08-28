@@ -4,3 +4,4 @@ a hat tip to all the codepen entries that helped me find and inspire ideas for t
  - coding this made me miss React so much😥..
  - This is a very very ugly code and will be beautified a lot
  - also the page will be iterated and developed completely in react.
+ - I also need to work at making this more adaptable for mobile devices
