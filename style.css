@@ -152,18 +152,18 @@ body {
 .my-links {
   display: inline;
   width: fit-content;
+  margin-right: 3rem;
 }
 .navbar {
   z-index: 999;
   position: fixed;
-  width: 95vw;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1.5rem;
   color: var(--primary-text-color);
 }
-
 .navbar ul {
   list-style-type: none;
   margin: 0%;
