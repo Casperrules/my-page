@@ -1,0 +1,198 @@
+:root {
+  --x: 0px;
+  --y: 0px;
+  --z: 0px;
+  --ox: 0px;
+  --oy: 0px;
+}
+
+html,
+body {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background-color: #d0cbc7;
+  color: #333344;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  user-select: none;
+}
+
+#score,
+#instructions,
+#start {
+  position: absolute;
+  transition: all 0.5s ease;
+}
+
+#score {
+  top: 25px;
+  opacity: 0;
+  font-size: 10vh;
+  transform: translateY(-100px);
+}
+#instructions {
+  top: 16vh;
+  opacity: 0;
+  text-align: center;
+}
+#start {
+  top: 22vh;
+  opacity: 1;
+  border: 3px solid #333344;
+  padding: 10px 20px;
+  font-size: 30px;
+  transform: translateY(0);
+}
+
+#score.ready {
+  opacity: 1;
+  transform: translateY(0);
+}
+#instructions.ready {
+  opacity: 1;
+}
+#start.ready {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+#score.lose {
+  font-size: 15vh;
+}
+
+#viewport {
+  perspective: none;
+  margin-top: 50px;
+  transform-style: preserve-3d;
+  transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg);
+}
+
+#scene {
+  height: 200px;
+  width: 200px;
+  transform-style: preserve-3d;
+  transition: transform 0.2s;
+}
+
+#base {
+  height: 200px;
+  width: 200px;
+  background-color: #333344;
+  transform: translateZ(-30px);
+}
+
+.block,
+.chunk,
+#base {
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.block:before,
+.chunk:before,
+#base:before,
+.block:after,
+.chunk:after,
+#base:after {
+  content: "";
+  position: absolute;
+  background-color: inherit;
+  filter: brightness(75%);
+}
+
+.block:before,
+.chunk:before,
+#base:before {
+  right: 0;
+  width: 30px;
+  height: 100%;
+  transform: rotateX(-90deg) translate3D(calc(100% - 15px), 15px, 0)
+    rotateX(90deg) rotateY(90deg);
+}
+
+.block:after,
+.chunk:after,
+#base:after {
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  transform: rotateY(-90deg) translate3D(-15px, calc(100% - 15px), 0)
+    rotateY(90deg) rotateX(90deg);
+}
+
+.block:last-child:nth-child(even) {
+  animation: 6s ease-in-out 0s infinite none running slide-y;
+}
+.block:last-child:nth-child(odd) {
+  animation: 6s ease-in-out 0s infinite none running slide-x;
+}
+.fall-y {
+  animation: 1s ease-in 0s fall-y;
+}
+.fall-x {
+  animation: 1s ease-in 0s fall-x;
+}
+
+@keyframes slide-x {
+  0% {
+    transform: translate3D(-220px, var(--y), var(--z));
+  }
+  50% {
+    transform: translate3D(220px, var(--y), var(--z));
+  }
+  100% {
+    transform: translate3D(-220px, var(--y), var(--z));
+  }
+}
+@keyframes slide-y {
+  0% {
+    transform: translate3D(var(--x), -220px, var(--z));
+  }
+  50% {
+    transform: translate3D(var(--x), 220px, var(--z));
+  }
+  100% {
+    transform: translate3D(var(--x), -220px, var(--z));
+  }
+}
+
+@keyframes fall-x {
+  from {
+    transform: translate3D(var(--ox), var(--oy), calc(var(--z) - 30px));
+  }
+  to {
+    transform: translate3D(var(--ox), var(--oy), calc(var(--z) - 120px))
+      rotateY(60deg);
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+@keyframes fall-y {
+  from {
+    transform: translate3D(var(--ox), var(--oy), calc(var(--z) - 30px));
+  }
+  to {
+    transform: translate3D(var(--ox), var(--oy), calc(var(--z) - 120px))
+      rotateX(-60deg);
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+.block.disappear {
+  width: 0 !important;
+  height: 0 !important;
+  transition: all 0.2s;
+}
+
+/* bearror logo ✖ᴥ✖ */
+svg {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  fill: #888;
+  opacity: 0.2;
+}

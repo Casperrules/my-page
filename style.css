@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100&display=swap");
 :root {
   scroll-behavior: smooth;
   --primary-background-color: #9bc1ce;
@@ -38,6 +39,17 @@ body {
 }
 
 #fun {
+  display: flex;
+  margin: 0%;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--primary-text-color);
+}
+
+#contact {
   display: flex;
   margin: 0%;
   height: 100vh;
@@ -91,8 +103,8 @@ body {
   padding: 1rem 1.5rem;
   opacity: 0.8;
   color: var(--primary-text-color);
-  animation: slide-right 3s forwards;
-  animation-delay: 2s;
+  animation: slide-right 2s forwards;
+  animation-delay: 1s;
 }
 .right-side-panel h1 {
   text-align: center;
@@ -115,8 +127,8 @@ body {
   width: 35vw;
   color: var(--primary-text-color);
   align-items: center;
-  animation: slide-left 3s forwards;
-  animation-delay: 2s;
+  animation: slide-left 2s forwards;
+  animation-delay: 1s;
 }
 .left-side-panel img {
   padding-top: 2.6rem;
@@ -283,4 +295,123 @@ a:hover {
   100% {
     right: 0;
   }
+}
+
+/* the magic part of crsl */
+
+.slideshow-container {
+  margin-top: 4rem;
+  align-items: center;
+  display: flex;
+}
+
+.mySlides {
+  width: 75%;
+  margin: auto;
+  display: none;
+}
+
+.mySlides img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  cursor: pointer;
+  height: 40vh;
+}
+
+.card:hover img {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+  transition: 1s ease-in-out;
+}
+
+.next,
+.prev {
+  font-size: 50px;
+  color: var(--primary-text-color);
+  opacity: 0.7;
+  cursor: pointer;
+  padding: 12rem 0rem;
+}
+
+.next:hover,
+.prev:hover {
+  font-size: 50px;
+  color: var(--primary-text-color);
+  cursor: pointer;
+  background-color: rgba(194, 191, 191, 0.568);
+}
+
+.next {
+  right: 0rem;
+}
+.prev {
+  left: 0rem;
+}
+
+/* the card magic code */
+.card {
+  border-radius: 1.5rem;
+  box-shadow: 2px 3px rgb(173, 173, 173);
+  padding: 1rem;
+  width: 100%;
+  height: fit-content;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--card-background);
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.card-desc {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 300;
+}
+.card-img img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 4rem;
+}
+
+/* game1 */
+#game1 {
+  width: 75vw;
+  height: 60vh;
+}
+
+.game-crsl {
+  display: flex;
+  align-items: center;
+}
+
+.game {
+  display: none;
+}
+
+#fun .title {
+  font-size: 3rem;
+  margin-bottom: 5rem;
+}
+
+.prev-game,
+.next-game {
+  font-size: 50px;
+  color: var(--primary-text-color);
+  opacity: 0.7;
+  cursor: pointer;
+  padding: 12rem 0rem;
+}
+.prev-game:hover,
+.next-game:hover {
+  font-size: 50px;
+  color: var(--primary-text-color);
+  opacity: 0.7;
+  cursor: pointer;
+  padding: 12rem 0rem;
 }

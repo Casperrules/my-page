@@ -11,17 +11,17 @@
   <body>
     <canvas class="container" id="container" role="main"></canvas>
     <header id="header" class="">
-      <img src="./statics/cloud1.png" alt="" class="cloud1" />
-      <img src="./statics/cloud2.png" alt="" class="cloud2" />
-      <img src="./statics/cloud3.png" alt="" class="cloud3" />
+      <img src="../statics/cloud1.png" alt="" class="cloud1" />
+      <img src="../statics/cloud2.png" alt="" class="cloud2" />
+      <img src="../statics/cloud3.png" alt="" class="cloud3" />
       <nav class="navbar">
-        <div ><a href="#" class="title"> HI! </a></div>
+        <div><a href="#" class="title"> HI! </a></div>
         <div class="my-links">
           <ul>
             <li><a href="#about-me">About </a></li>
             <!-- <li><a href="http://">Projects</a></li> -->
             <li><a href="#fun">Fun </a></li>
-            <li><a href="http://">Contact </a></li>
+            <li><a href="#contact">Contact </a></li>
           </ul>
           <div id="toggle">
             <div id="circle"></div>
@@ -52,8 +52,12 @@
     </header>
     <section id="about-me">
       <div class="left-side-panel">
-        <img src="https://media-exp1.licdn.com/dms/image/C4E03AQEXz6X-GDugmA/profile-displayphoto-shrink_800_800/0/1609275067458?e=1635379200&v=beta&t=frQicDZ87AxhDAMZ4-95K0m6lSSp4PJCb2iicH21xS4" alt="" srcset="" />
-        <div >
+        <img
+          src="https://media-exp1.licdn.com/dms/image/C4E03AQEXz6X-GDugmA/profile-displayphoto-shrink_800_800/0/1609275067458?e=1635379200&v=beta&t=frQicDZ87AxhDAMZ4-95K0m6lSSp4PJCb2iicH21xS4"
+          alt=""
+          srcset=""
+        />
+        <div>
           <h1 class="title">
             This is ME !!!
           </h1>
@@ -69,29 +73,207 @@
           interesting DSA problems which also inclined me towards competetive
           programming problems.
         </p>
-        
+
         <p class="description">
           Following are the techs I have worked on:
-          <ul>
-            <li><strong>Python:-</strong> python has beenmy favourite language since I started learning programming 4 years ago. I have also been an instructor for advance python courses. The first web framework I learned was in python(flask and later Django). I also learned creating UIs in python and obviously data science, data visualization and machine learning</li>
-            <li><strong>Java:-</strong> Java was the second favourite language I had after python. I have worked with creating Java based applications and connecting them to sql databases to create a nice attractive desktop application. I also trained in Java and cleared the Java associate certificate from microsoft. </li>
-            <li><strong>JavaScript:-</strong> javaScript is probably the most used language by me, used for creating web applications, I later turned to typeScript but well "potato, better potato" right?</li>
-            <li><strong>TypeScript:-</strong> typeScript is a recent language for me but since I am quite familiar with javaScript, the shift to typeScript was really not that hard.</li>
-            <li><strong>Databases:-</strong> data in today's world is the most important asset and handling data becomes very cruicial for efficient performance of applications.m I have worked on both <strong>SQL</strong>(mySQL, Oracle SQL database)and <strong>NOSQL</strong>(mongoDB) type databases.</li>
-            <li><strong>REACT:-</strong> Well, talking about some useful liberaries, React is the most useful one I have used (with typeScript and javaScript). The process of frontend dev becomes so much easier with REACT</li>
-            <li><strong>Angular:-</strong> The angular framework, helps handelling frontend development easy too but the dataflow becomes sometimes confusing to me. I liked angular but I preffer React</li>
-            <li><strong>REST API:-</strong> I have been creating fullstack applications for about a year now. I love the way creating APIs make the backend so easy to handle and manageable. Most of the backends I create are using <strong>Express</strong> on Node.</li>
-          </ul>
         </p>
+        <div class="slideshow-container">
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <div class="mySlides">
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="https://pluralsight2.imgix.net/paths/images/python-7be70baaac.png"
+                  alt=""
+                />
+              </div>
+              <div class="card-title">
+                Python
+              </div>
+              <div class="card-desc">
+                Python is like my mother tongue for programming and being so
+                versatile it is amazing, things you can do with it. I have
+                worked on almost all aspects where python can do. <br />
+                <strong>-> Data Visualization <br /></strong>
+                <strong
+                  >-> Machine Learning(computer vision, sentiment analysis
+                  etc)</strong
+                >
+                <br />
+                <strong>-> Flask <br /></strong>
+                <strong> -> Django <br /></strong>
+                <strong> -> GUI using Tkinter <br /> </strong>
+                <strong>
+                  -> Ansible(infrastructure management for SAP applicationa dn
+                  database clusters) <br
+                /></strong>
+                <strong>-> Robotics</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="mySlides">
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="data:image/jpeg;base64,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"
+                  alt=""
+                />
+              </div>
+              <div class="card-title">
+                JAVA
+              </div>
+              <div class="card-desc">
+                Java is another versatile language and more efficient in the
+                internal workings than python. <br />
+                Following are the things I have used Java for: <br />
+                <strong>-> Student management system <br /></strong>
+                😅 well that was a short list <br />
+                But , I have created functions for
+                <strong>some DSA</strong> applications like
+                <strong> graph algorithms</strong>,
+                <strong>linked lists</strong>,
+                <strong>search algorithms</strong>, <strong>KMP</strong>, etc..
+              </div>
+            </div>
+          </div>
+
+          <div class="mySlides">
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="https://images.ctfassets.net/s600jj41gsex/3194qQ7O0Fx9mJSzNE3nUx/07e28e06b2cb9573186a2586d8786bd6/Image_default_ModernJavascript.png?w=768&q=50&fit=scale"
+                  alt=""
+                />
+              </div>
+              <div class="card-title">
+                TypeScript/JavaScript
+              </div>
+              <div class="card-desc">
+                So.. Honestly, I started with JavaScript way back in 2018 for my
+                Web Programming class and apparently it scared me the way it was
+                working. After that I started to create web applications and
+                started to get the concept. It is an amazing language and
+                probably the most used language by me after python.
+                JavaScript/TypeScript projects:
+                <br />
+                <strong>-> NodeJS and express</strong>
+                <br />
+                <strong>-> reactJS</strong>
+                <br />
+                <strong
+                  >-> Backends, in TypeScript and JavaScript connected to
+                  Databases</strong
+                >
+                <br />
+                <strong>-> Angular</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="mySlides">
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="https://i0.wp.com/restfulapi.net/wp-content/uploads/rest.png?fit=300%2C300&ssl=1"
+                  alt=""
+                />
+              </div>
+              <div class="card-title">
+                REST API
+              </div>
+              <div class="card-desc">
+                A REST API (also known as RESTful API) is an application
+                programming interface (API or web API) that conforms to the
+                constraints of REST architectural style and allows for
+                interaction with RESTful web services. REST stands for
+                representational state transfer and was created by computer
+                scientist Roy Fielding. <br />
+                And yes, I copy pasted that. 😬
+                <br />
+                Basically it makes the backend more managable and fun to create
+              </div>
+            </div>
+          </div>
+          <div class="mySlides">
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="https://www.graycelltech.com/wp-content/uploads/2020/08/866196_be1d.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="card-title">
+                Databases
+              </div>
+              <div class="card-desc">
+                Data drives this worl, and efficient database management becomes
+                extreamly important for efficient applicaitons.
+                <br />
+                <strong>-> SQL (or Relational Databases):</strong>
+                <br />
+                A relational database is a type of database that stores and
+                provides access to data points that are related to one another.
+                <br />
+                I have worked with <strong>MySQL</strong>,<strong
+                  >Oracle SQL DB</strong
+                >
+                <br />
+                <br />
+                <strong>-> NOSQL (or non-Relational Databases):</strong>
+                <br />
+                These databases store data as a document instead of a fixed
+                table schema. Non-relational databases are often used when large
+                quantities of complex and diverse data need to be organized.
+                <br />
+                On the NOSQL side of databases, I have mostly worked with
+                <strong>MongoDB</strong>
+              </div>
+            </div>
+          </div>
+
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
       </div>
     </section>
     <section id="fun">
+      <div class="title">
+        Hi, You must be tiered, Take some rest.. Play some games!
+      </div>
+      <div class="game-crsl">
+        <a class="prev-game" onclick="plusGames(-1)">&#10094;</a>
+        <div class="game">
+          <iframe src="game1.html" id="game1" frameborder="0"></iframe>
+        </div>
+        <div class="game">
+          <iframe src="game2.html" id="game1" frameborder="0"></iframe>
+        </div>
+        <div class="game">
+          <iframe src="game3.html" id="game1" frameborder="0"></iframe>
+        </div>
+        <div class="game">
+          <iframe src="game4.html" id="game1" frameborder="0"></iframe>
+        </div>
+        <div class="game">
+          <iframe src="game5.html" id="game1" frameborder="0"></iframe>
+        </div>
+        <div class="game">
+          <iframe src="game6.html" id="game1" frameborder="0"></iframe>
+        </div>
+        <a class="next-game" onclick="plusGames(1)">&#10095;</a>
+      </div>
+    </section>
+    <section id="contact">
       <div class="coming-soon">
         <h1>
-          COMING SOON!!!!!!!!!!!!!!!!!
+          THIS ALSO COMING SOON :) !!!!!!!!!!!!!!!!!
         </h1>
       </div>
     </section>
     <script src="main.js"></script>
+    <script src="crsl.js"></script>
+    <script src="game1.js"></script>
+    <script src="game2.js"></script>
+    <script src="game3.js"></script>
   </body>
 </html>

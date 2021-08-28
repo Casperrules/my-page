@@ -1,0 +1,11 @@
+body {
+  background: hsl(235, 60%, 13%); /*#051a41;*/
+  margin: 0;
+  overflow: hidden;
+}
+
+#title {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}

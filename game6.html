@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="game6.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="button">click me</button>
+    <button id="reset">Reset Clicks</button>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <script>
+      var button = document.getElementById("button"),
+        count = 0;
+      button.onclick = function () {
+        count += 1;
+        button.innerHTML = "Click me: " + count;
+      };
+      var resetBtn = document.getElementById("reset");
+      resetBtn.onclick = () => {
+        count = 0;
+        button.innerHTML = "Click ME";
+      };
+    </script>
+    <script src="game6.js"></script>
+  </body>
+</html>
