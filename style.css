@@ -446,6 +446,8 @@ a:hover {
 }
 input {
   width: 100%;
+  color: #fff;
+  font-size: 1rem;
   padding: 0.7rem;
   box-sizing: border-box;
   background: none;
